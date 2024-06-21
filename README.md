@@ -44,3 +44,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 代码规范的配置
+
+### install eslint
+
+依赖的包： eslint@8.x, globals, @eslint/js, typescript-eslint, eslint-plugin-react
