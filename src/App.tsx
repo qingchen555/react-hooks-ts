@@ -2,8 +2,8 @@ import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">hello china</header>
+    <div className='App'>
+      <header className='App-header'>hello china</header>
     </div>
   )
 }

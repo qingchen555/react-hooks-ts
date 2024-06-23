@@ -37,16 +37,43 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+you can use craco or react-app-rewired plugin to override the webpack configuration
 
-## Learn More
+## Related learn links
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## 代码规范的配置
+## Code specification config
 
-### install eslint
+### config eslint
 
-依赖的包： eslint@8.x, globals, @eslint/js, typescript-eslint, eslint-plugin-react
+1-install eslint plugin in vscode
+2-install eslint
+1.run "npm install eslint -D"
+2.and also install the dependency package：
+eslint@8.x, globals, @eslint/js, typescript-eslint, eslint-plugin-react
+
+3-config eslint
+1.run "npx eslint --init" // 将会生成一个.eslint.mjs文件
+2.need manualy to create the .eslintrc.js file in root path：
+
+### add .editorconfig file
+
+### config prettier
+
+1-install vscode plugin: prettier-code formate
+2-npm install prettier -D // dev dependency
+3-manually create a file : .prettierrc
+{
+"printWidth": 100, // 一行的字符数，如果超过会进行换行
+"tabWidth": 2, // 一个tab代表几个空格数，默认就是2
+"useTabs": false, // 是否启用tab取代空格符缩进，.editorconfig设置空格缩进，所以设置为false
+"semi": false, // 行尾是否使用分号，默认为true
+"singleQuote": true, // 字符串是否使用单引号
+"trailingComma": "none", // 对象或数组末尾是否添加逗号 none| es5| all
+"jsxSingleQuote": true, // 在jsx里是否使用单引号，你看着办
+"bracketSpacing": true, // 对象大括号直接是否有空格，默认为true，效果：{ foo: bar }
+"arrowParens": "avoid", // 箭头函数如果只有一个参数则省略括号
+}
