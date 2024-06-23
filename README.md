@@ -58,6 +58,8 @@ eslint@8.x, globals, @eslint/js, typescript-eslint, eslint-plugin-react
 3-config eslint
 1.run "npx eslint --init" // 将会生成一个.eslint.mjs文件
 2.need manualy to create the .eslintrc.js file in root path：
+2.1: why add react/jsx-runtime?
+在React@17以后，是不需要再手动去引入React的。因为该版本之后加入了react/jsx-runtime，会自动对JSX进行解析。所以，需要在extends中加入：plugin:react/jsx-runtime
 
 ### add .editorconfig file
 
@@ -77,3 +79,34 @@ eslint@8.x, globals, @eslint/js, typescript-eslint, eslint-plugin-react
 "bracketSpacing": true, // 对象大括号直接是否有空格，默认为true，效果：{ foo: bar }
 "arrowParens": "avoid", // 箭头函数如果只有一个参数则省略括号
 }
+
+## config less
+
+## 路由配置
+
+## 创建项目结构
+
+assets： 资源
+base-ui： 多个项目中都使用的组件
+components：
+hooks：
+router：
+services
+utils：
+
+## css样式的重置
+
+### normalize.css
+
+都一些常见的元素的样式需要重置
+作用：
+与许多CSS重置不同，保留有用的默认值。
+规范化各种元素的样式。
+更正了错误和常见的浏览器不一致性。
+通过一些小技巧提高可用性。
+使用详细注释说明代码的作用。
+
+### less config
+
+     直接使用npm install craco-less@2.1.0-alpha.0进行安装
+     然后在craco.config.js文件中配置对应的plugin
