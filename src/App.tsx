@@ -1,11 +1,9 @@
 import './App.css'
+import { useRoutes } from 'react-router-dom'
+import routes from './routers/index'
 
 function App() {
-  return (
-    <div className='App'>
-      <header className='App-header'>hello china</header>
-    </div>
-  )
+  return <div className='App'>{useRoutes(routes)}</div>
 }
 
 export default App

@@ -110,3 +110,9 @@ utils：
 
      直接使用npm install craco-less@2.1.0-alpha.0进行安装
      然后在craco.config.js文件中配置对应的plugin
+
+## 路由配置
+
+1-首先安装 npm install react-router-dom
+2-在routers文件夹下面创建对应的routes（path 和element）
+3-同时要在App使用的地方包裹一层HashRouter或者BrowserRouter
