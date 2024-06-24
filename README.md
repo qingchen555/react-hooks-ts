@@ -137,10 +137,18 @@ FC： functionComponent的缩写
 
 ## Navigate 重定向
 
-## 路由的懒加载
+## 一级路由的懒加载
 
 其实就是分包处理，只有在需要该组件的时候再去imports对应的包， 具体实现方式：
 1- routes中使用lazy
 const Discover = lazy(() => import('@/views/discover/index'))
 2- app组件中使用link
 3-因为懒加载时，有的组件还没有下载下来，需要supense应急一下
+
+## 二级路由懒加载
+
+Parent组件中的Outlet将会渲染Child组件
+
+### 点击nav时候出现闪烁的问题
+
+在使用link的discover部分也适用suspense
