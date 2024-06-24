@@ -1,9 +1,12 @@
 import { Navigate } from 'react-router-dom'
 import { RouteObject } from 'react-router-dom'
-import Discover from '@/views/discover/index'
-import Mine from '@/views/mine'
-import Focus from '@/views/focus'
-import Download from '@/views/download'
+import { lazy } from 'react'
+
+const Discover = lazy(() => import('@/views/discover/index'))
+const Mine = lazy(() => import('@/views/mine'))
+const Focus = lazy(() => import('@/views/focus'))
+const Download = lazy(() => import('@/views/download'))
+
 const routes: RouteObject[] = [
   {
     path: '/',
