@@ -116,3 +116,23 @@ utils：
 1-首先安装 npm install react-router-dom
 2-在routers文件夹下面创建对应的routes（path 和element）
 3-同时要在App使用的地方包裹一层HashRouter或者BrowserRouter
+
+## 类型约束
+
+1- 对函数组件的类型
+2-对props的类型约束
+1）定义interface
+2）react自带的一些类型
+使用方式：
+1-import type {ReactNode} from 'react'
+2-范型 :Download:React.FC<Iprops> = (props)=>{}
+note：props是父组件传递给子组件的所有属性
+FC： functionComponent的缩写
+
+## 快速生成模版片段
+
+1-先设计一个代码模版
+2-在snippet-generator.app中生成vscode使用的代码配置
+3-在vs code 》设置中配置
+
+## Navigate 重定向
