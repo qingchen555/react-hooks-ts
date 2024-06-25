@@ -152,3 +152,41 @@ Parent组件中的Outlet将会渲染Child组件
 ### 点击nav时候出现闪烁的问题
 
 在使用link的discover部分也适用suspense
+
+## 状态管理
+
+### 安装相关的库和工具
+
+1-安装状态相关的库
+npm install @reduxjs/toolkit react-redux
+(1)创建一个store
+通过@reduxjs/toolkit工具中的configureStore
+(2)使用store
+
+note: b站- react hooks 课程 > P12 > 关于state类型定义的问题是如何推倒出来问题做了很多解析
+具体使用方式可以参考 redux官网
+方式1: type GetStateFnType = typeof store.getState
+export type IRootState = ReturnType<GetStateFnType>
+该方式的缺点： 每次使用IRootState需要import导入，会比较麻烦
+进一步优化的方式：
+也可以不导入该类型， 可以通过对use Selector进行封装来设计动态类型
+此时，使用【函数调用签名】【函数签名】
+
+### 更新状态的方式
+
+useDispatch（）:对其使用方式进行类型的封装
+type DispatchType = typeof store.dispatch
+export const useAppDispatch: () => DispatchType = useDispatch
+
+### TS知识：对于TypedUseSelectorHook的解释
+
+是在b站- react hooks 课程 > P14 > 关于state类型定义的问题做了很多解析
+去官方站去查，看下原理，做了什么事情，知道大概什么意思
+
+## 内容回顾
+
+react hooks 课程 > P15 > 课程笔记总结
+
+## axios异步请求管理
+
+1-npm install axios
