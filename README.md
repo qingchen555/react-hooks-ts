@@ -266,8 +266,55 @@ npm install @ant-design/icons --save
 2-异步请求获取数据： createAsyncThunk
 recommend > store > recommend.ts
 3-将请求的数据在view中显示：
-1-render the view
-2-trigger the action: fetchBannerDataAction
-3-send the requesst to get the data
-4-dispatch the data to reducer to update the state value
-5-useAppSelector get the state value to show in view
+
+> > > > > > > > 3.1-render the view
+> > > > > > > > 3.2-trigger the action: fetchBannerDataAction
+> > > > > > > > 3.3-send the requesst to get the data
+> > > > > > > > 3.4-dispatch the data to reducer to update the state value
+> > > > > > > > 3.5-useAppSelector get the state value to show in view
+
+4-轮播图实现步骤
+------4.1高斯模糊imageView
+通过在url部分增加http://p1.music.126.net/ca0HX7FBEuOZX86XtxiMMg==/109951169722246161.jpg?imageView&blur=40x20&quot;
+------4.2 轮博效果： 淡入淡出同时有按钮
+------4.3 先设置页面需要的模块
+bannerLeft(设置css样式) + bannerRight + bannerControl(设置绝对定位)
+
+------4.4 模块之间的数据联动--绑定一些事件
+handlePrevClick： 需要调用Carousel的方法， 先拿到Carousel dom元素。需要绑定ref 【useRef】
+const bannerRef = useRef<ElementRef<typeof Carousel>>(null)
+ElementRef：
+------4.5 模块淡入淡出效果
+effect='fade'
+------4.6 模块背景图--动态展示
+使用动态样式绑定style
+目前有个问题：淡出之后才会显示背景图片，如何优化？
+------4.7 实现自己的dots样式
+问题：滚动到哪个图片，dot显示为红色
+解决方式：动态添加class， 需要引入第三方库的classnames
+
+问题： dot会先消失然后再出现的效果
+解决方式：
+beforeChange={handleBeforeChange}
+afterChange={handleAfterChange}
+
+5-内容回顾
+一.额外类型的补充
+1.1 类组件和TS结合
+复习TS知识点
+1.2 redux中类型补充
+initialState
+action
+二。 网络请求封装
+2.1 hyrequest
+2.2 区分开发环境和生产环境
+
+三。Appheader的搭建
+3.1 header导航中的导航
+3.2 默认的active=》Navlink
+
+四。 Recommend页面
+4.1 顶部导航
+4.2 根据业务划分recommend的文件夹结构图
+4.3获取轮播图的数据
+4.4 设计具体的轮播图：背景图片，右侧二维码，两边按钮
