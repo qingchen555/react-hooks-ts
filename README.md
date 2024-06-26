@@ -190,3 +190,54 @@ react hooks 课程 > P15 > 课程笔记总结
 ## axios异步请求管理
 
 1-npm install axios
+
+### 对于state定义类型
+
+1-在useState<stateType>:设置范型
+
+### react中区分开发环境和生产环境
+
+1-手动切换
+2-依赖当前的环境
+通过process.env.node_env
+然后本地启动prod环境： npm run build > npm install -g serve > serve -s build
+3-动态加载环境配置
+设置env.development and env.prod文件
+
+## 关于TS的知识
+
+react hooks 课程 > P18 > 课程笔记总结
+范型类： class Component extends PureComponent<Iprops， IState>
+在该类中定义Iprops类型，可以对该类中的所有props属性进行设置
+
+## redux中类型的补充
+
+react hooks 课程 > P19 > 课程笔记总结
+
+## 样式的设计和使用
+
+1-使用Styled Components样式组件库
+Styled Components 是一个使用CSS-in-JS技术实现的样式组件库，它是一个为React和React Native设计的库。它允许我们在应用中使用JavaScript和CSS混合起来编写样式级组件。并且它是支持Sass的，不需要添加任何库。
+1.1 为什么需要为第三方库styled-components引入另外的声明文件？
+1.2 styled-components 使用方式
+1.3 theme的混入：使用mixin
+
+### header布局的设计
+
+1.1 首先设计布局： left 和 right
+HeaderLeft and HeaderRight
+
+1.2 样式的具体使用
+对于 a 链接里面显示图片，可以通过class形式，利用以下代码来形成
+background-position: 0 0; // 用于设计背景图像的起始位置， 可以是像素，也可以直接关键字（top， bottom， center）或者百分比
+text-indent: -9999px; // 设计文本块中首行文本的缩进，为负值，表示悬挂缩进，首行文本超出容器左侧边界
+background: url(../img/sprite_01.png) no-repeat 0 9999px;
+//background-color background-image background-repeat background-position background-attachment background-size
+背景图像： background-image
+是否固定：background-attachment fixed | scroll | inherit
+
+1.3 所有编程最终的目的都是处理数据
+所有讲一些循环的数据放在json格式的文件中 src/assets/data/header_titles.json
+
+1.4 选中每个title之后，鼠标离开也要显示选中的状态
+react hooks 课程 > P23 > 课程笔记总结
