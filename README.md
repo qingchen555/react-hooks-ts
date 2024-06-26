@@ -258,5 +258,16 @@ npm install @ant-design/icons --save
 
 ### 二级路由部分
 
-<NavBar>
+<NavBar> + 具体的样式部分
+
 ### 具体轮播图展示部分
+
+1-确定文件夹结构 ： 按照功能划分文件夹结构和按照业务划分文件夹结构
+2-异步请求获取数据： createAsyncThunk
+recommend > store > recommend.ts
+3-将请求的数据在view中显示：
+1-render the view
+2-trigger the action: fetchBannerDataAction
+3-send the requesst to get the data
+4-dispatch the data to reducer to update the state value
+5-useAppSelector get the state value to show in view
