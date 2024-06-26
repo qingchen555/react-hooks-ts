@@ -253,3 +253,10 @@ npm install antd
 需要引入 antd.less ?
 
 npm install @ant-design/icons --save
+
+## Discover detail part :
+
+### 二级路由部分
+
+<NavBar>
+### 具体轮播图展示部分
