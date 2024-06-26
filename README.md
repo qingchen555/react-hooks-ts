@@ -240,4 +240,16 @@ background: url(../img/sprite_01.png) no-repeat 0 9999px;
 所有讲一些循环的数据放在json格式的文件中 src/assets/data/header_titles.json
 
 1.4 选中每个title之后，鼠标离开也要显示选中的状态
-react hooks 课程 > P23 > 课程笔记总结
+react hooks 课程 > P23 >
+方式1: 直接在a标签中加active
+方式2: 设置一个index，点到哪一个，就选择哪个index
+方式3:
+NavLink比Link是有active属性的 ，就是当你的url path 和你点击的path匹配的时候
+
+## 使用antd design P24 课程
+
+npm install antd
+
+需要引入 antd.less ?
+
+npm install @ant-design/icons --save
