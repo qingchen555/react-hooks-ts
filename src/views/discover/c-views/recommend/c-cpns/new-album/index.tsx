@@ -3,6 +3,9 @@ import type { ElementRef, FC, ReactNode } from 'react'
 import { AlbumWrapper } from './style'
 import AreaheaderV1 from '@/components/area-header-rmd/index'
 import { Carousel } from 'antd'
+import { useAppSelector } from '@/store'
+import { shallowEqual } from 'react-redux'
+import NewAlbumItem from '@/components/new-album-item'
 
 interface Iprops {
   children?: ReactNode
@@ -11,6 +14,13 @@ interface Iprops {
 const NewAlbum: FC<Iprops> = () => {
   const bannerRef = useRef<ElementRef<typeof Carousel>>(null)
 
+  /*从store中获取数据*/
+  const { newAlbums } = useAppSelector(
+    state => ({
+      newAlbums: state.recommend.newAlbums
+    }),
+    shallowEqual
+  )
   /*事件处理函数*/
   function handlePrevClick() {
     console.log('handlePrevClick')
@@ -28,11 +38,15 @@ const NewAlbum: FC<Iprops> = () => {
         <div className='sprite_02 arrow arrow-left' onClick={handlePrevClick} />
         <div className='banner'>
           <Carousel ref={bannerRef} dots={false} speed={2000}>
-            {[1, 2].map(item => {
+            {[0, 1].map(item => {
               return (
-                <h1 className='item' key={item}>
-                  {item}
-                </h1>
+                <div key={item}>
+                  <div className='album-list'>
+                    {newAlbums.slice(item * 5, (item + 1) * 5).map(album => {
+                      return <NewAlbumItem key={album.id} itemData={album} />
+                    })}
+                  </div>
+                </div>
               )
             })}
           </Carousel>

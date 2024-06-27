@@ -337,3 +337,12 @@ action
 ---5.2 对于数字进行格式话，如以23万的形式展示
 
 6-新碟上架的轮播设计
+6.1 分页处理方案
+双层遍历 in new-album
+（重点是对数据的处理：数据结构和算法很重要）
+6.2 对于carousel里面包裹的div设置flex无效
+因为carousel本身包裹的div 为inline-block
+
+6.3 图片阴影效果
+
+6.4carousel里面包裹的图片为什么width会自动设置为0

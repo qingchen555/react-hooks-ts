@@ -40,6 +40,12 @@ export const AlbumWrapper = styled.div`
     .banner {
       overflow: hidden;
       marign: 0 20px;
+
+      .album-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
 
     .album {

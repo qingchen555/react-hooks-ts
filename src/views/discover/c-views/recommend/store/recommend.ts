@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { getBanners, getHotRecommend } from '../service/recommend'
+import { getBanners, getHotRecommend, getNewAlbum } from '../service/recommend'
 
 export const fetchBannerDataAction = createAsyncThunk('banners', async (arg, { dispatch }) => {
   const res = await getBanners()
@@ -18,14 +18,23 @@ export const fetchHotRecommendAction = createAsyncThunk(
   }
 )
 
+export const fetchNewAlbumAction = createAsyncThunk('newAlbums', async (arg, { dispatch }) => {
+  const res = await getNewAlbum()
+  dispatch(changeNewAlbumsAction(res.albums))
+
+  // return res.banners
+})
+
 interface IRecommendState {
   banners: any[]
   hotRecommends: []
+  newAlbums: any[]
 }
 
 const initialState: IRecommendState = {
   banners: [],
-  hotRecommends: []
+  hotRecommends: [],
+  newAlbums: []
 }
 const recommendSlice = createSlice({
   name: 'recommend',
@@ -37,6 +46,10 @@ const recommendSlice = createSlice({
     },
     changeRecommendsAction(state, { payload }) {
       state.hotRecommends = payload
+    },
+    changeNewAlbumsAction(state, { payload }) {
+      console.log(payload)
+      state.newAlbums = payload
     }
   }
   // extraReducers: builder => {
@@ -56,5 +69,6 @@ const recommendSlice = createSlice({
 
 // fetchBannerDataAction 异步返回的值分别对应不同的响应状态
 // extraReducers ： 可以在浏览器redux中查看状态
-export const { changeBannersAction, changeRecommendsAction } = recommendSlice.actions
+export const { changeBannersAction, changeRecommendsAction, changeNewAlbumsAction } =
+  recommendSlice.actions
 export default recommendSlice.reducer
