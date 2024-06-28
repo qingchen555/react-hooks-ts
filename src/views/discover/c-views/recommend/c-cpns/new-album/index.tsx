@@ -23,11 +23,9 @@ const NewAlbum: FC<Iprops> = () => {
   )
   /*事件处理函数*/
   function handlePrevClick() {
-    console.log('handlePrevClick')
     bannerRef.current?.prev()
   }
   function handleNextClick() {
-    console.log('handleNextClick')
     bannerRef.current?.next()
   }
 
@@ -53,7 +51,6 @@ const NewAlbum: FC<Iprops> = () => {
         </div>
         <div className='sprite_02 arrow arrow-right' onClick={handleNextClick} />
       </div>
-      NewAlbum
     </AlbumWrapper>
   )
 }

@@ -17,7 +17,6 @@ function App() {
   )
   const dispatch = useAppDispatch()
   function handleMessage() {
-    console.log('handle message')
     //如果想修改state：message，必须使用dispatch action
     dispatch(changeMessageAction('hhhhh'))
   }

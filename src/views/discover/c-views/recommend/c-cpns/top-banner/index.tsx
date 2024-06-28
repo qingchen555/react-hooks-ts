@@ -17,7 +17,7 @@ const TopBanner: FC<Iprops> = () => {
 
   // 从store中获取数据
   const { banners } = useAppSelector(state => {
-    console.log('selector:', state.recommend.banners)
+    // console.log('selector:', state.recommend.banners)
     return { banners: state.recommend.banners || [] }
   }, shallowEqual)
 
@@ -31,12 +31,9 @@ const TopBanner: FC<Iprops> = () => {
   }
 
   // 切换面板的回掉
-  function handleBeforeChange() {
-    console.log('000')
-  }
+  function handleBeforeChange() {}
 
   function handleAfterChange(current: number) {
-    console.log('current', current)
     setCurrentIndex(current)
   }
 

@@ -40,7 +40,6 @@ const RecommendCopy: FC<Iprops> = () => {
 
   useEffect(() => {
     hyRequest.get({ url: '/banner' }).then((res: any) => {
-      console.log(res)
       setBanners(res.banners || [])
     })
   }, [])

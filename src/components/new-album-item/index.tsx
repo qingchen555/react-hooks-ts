@@ -10,7 +10,6 @@ interface Iprops {
 
 const NewAlbumItem: FC<Iprops> = props => {
   const { itemData } = props
-  console.log('itemData', itemData)
   return (
     <NewAlbumWrapper>
       <div className='top'>
