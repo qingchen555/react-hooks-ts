@@ -11,7 +11,7 @@ interface Iprops {
 }
 
 const HotRecommend: FC<Iprops> = () => {
-  const { hotRecommends } = useAppSelector(
+  const { hotRecommends = [] } = useAppSelector(
     state => ({ hotRecommends: state.recommend.hotRecommends }),
     shallowEqual
   )

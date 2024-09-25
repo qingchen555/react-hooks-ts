@@ -18,7 +18,7 @@ class HYRequest {
   constructor(config: HYRequestConfig) {
     this.instance = axios.create(config)
 
-    // 全局的拦截器
+    // 请求的拦截器
     this.instance.interceptors.request.use(
       config => {
         return config
@@ -27,7 +27,7 @@ class HYRequest {
         return err
       }
     )
-
+    //响应的拦截器
     this.instance.interceptors.response.use(
       res => {
         return res.data

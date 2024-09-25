@@ -15,6 +15,7 @@ interface Iprops {
 const Recommend: FC<Iprops> = () => {
   const dispatch = useAppDispatch()
 
+  //useEffect中执行一些副作用，如，操作dom，获取异步数据，它是异步执行的，是在组件还是页面渲染完成后执行
   useEffect(() => {
     console.log('Recommend render : useeffect request the data')
     // dispatch(fetchBannerDataAction()),

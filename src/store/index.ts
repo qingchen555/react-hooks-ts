@@ -3,6 +3,7 @@ import counterReducer from './modules/counter'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import recommendReducer from '../views/discover/c-views/recommend/store/recommend'
 
+//将多个切片进行合并
 const store = configureStore({
   reducer: {
     counter: counterReducer,
@@ -10,7 +11,7 @@ const store = configureStore({
   }
 })
 
-type GetStateFnType = typeof store.getState // 获取函数的类型
+type GetStateFnType = typeof store.getState //
 type IRootState = ReturnType<GetStateFnType> //ReturnType工具具体实现原理
 type DispatchType = typeof store.dispatch
 

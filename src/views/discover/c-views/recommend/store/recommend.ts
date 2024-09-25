@@ -77,6 +77,7 @@ const initialState: IRecommendState = {
   newAlbums: [],
   rankings: []
 }
+
 const recommendSlice = createSlice({
   name: 'recommend',
   initialState,

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # react-hooks-ts
-=======
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -230,7 +228,7 @@ Styled Components 是一个使用CSS-in-JS技术实现的样式组件库，它�
 1.1 首先设计布局： left 和 right
 HeaderLeft and HeaderRight
 
-1.2 样式的具体使用
+1.2 css-样式的具体使用
 对于 a 链接里面显示图片，可以通过class形式，利用以下代码来形成
 background-position: 0 0; // 用于设计背景图像的起始位置， 可以是像素，也可以直接关键字（top， bottom， center）或者百分比
 text-indent: -9999px; // 设计文本块中首行文本的缩进，为负值，表示悬挂缩进，首行文本超出容器左侧边界
@@ -360,4 +358,3 @@ action
 
 1.2分析基本的布局，设计大概的框架
 1.3 设计需要复用的子组件
->>>>>>> 532fee9b60c303654a22b9dcb7c03d34bf179b75

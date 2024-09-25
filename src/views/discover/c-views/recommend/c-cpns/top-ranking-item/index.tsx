@@ -1,8 +1,8 @@
-import React, { memo } from 'react'
+import { memo } from 'react'
 import type { FC, ReactNode } from 'react'
 import { RankingItemWrapper } from './style'
 import { getImageSize } from '@/utils/format'
-import { useAppDispatch } from '@/store'
+// import { useAppDispatch } from '@/store'
 //  import { fetchCurrentSongAction } from '@/views/player/store/player'
 
 interface IProps {
@@ -12,7 +12,7 @@ interface IProps {
 
 const TopRankingItem: FC<IProps> = ({ itemData }) => {
   const { tracks = [] } = itemData
-  const dispatch = useAppDispatch()
+  // const dispatch = useAppDispatch()
 
   //  function handlePlayClick(id: number) {
   //    dispatch(fetchCurrentSongAction(id))
